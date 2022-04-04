@@ -77,7 +77,7 @@ void NRF24::modeTX(){
     reg &= ~(1<<0);
     writeReg(0, reg);
     
-    ceLow(); // Correction from video.
+    ceLow(); // Correction from video, thansk schuhmann.
     
     sleep_us(130);
 }
@@ -86,7 +86,7 @@ void NRF24::modeRX(){
     reg |= (1<<0);
     writeReg(0, reg);
     
-    ceHigh(); // Correction from video.
+    ceHigh(); // Correction from video, thanks schuhmann.
     
     sleep_us(130);
 
